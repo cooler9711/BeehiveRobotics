@@ -41,6 +41,7 @@ public class TeleOp4Motor extends OpMode {
 
         telemetry.addData("Left power: ", left);
         telemetry.addData("Right power: ", right);
+        telemetry.update();
     }
 
     public void reverseMotor(DcMotor motor) {
