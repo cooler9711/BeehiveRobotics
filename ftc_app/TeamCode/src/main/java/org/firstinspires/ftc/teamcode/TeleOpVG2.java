@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.*;
 
 @TeleOp(name = "TeleOpVG", group = "linear OpMode")
-public class TeleOpVG extends OpMode {
+public class TeleOpVG2 extends OpMode {
 
     DcMotor Left;
     DcMotor Left2;
@@ -21,7 +21,6 @@ public class TeleOpVG extends OpMode {
         Right = hardwareMap.dcMotor.get("m2");
         Left2 = hardwareMap.dcMotor.get("m3");
         Right2 = hardwareMap.dcMotor.get("m4");
-
         reverseMotor(Left);
         reverseMotor(Left2);
     }
@@ -31,19 +30,21 @@ public class TeleOpVG extends OpMode {
         float speed = gamepad1.right_trigger;
         float steering = gamepad1.left_stick_x;
         float middle = speed - Math.abs(steering);
+        float right = 0;
+        float left = 0;
 
         if (steering > 0) {
-            float right = middle - steering;
-            float left = middle + steering;
+            right = middle - steering;
+            left = middle + steering;
         }
         else if (steering < 0) {
-            float right = middle + steering;
-            float left = middle - steering;
+            right = middle + steering;
+            left = middle - steering;
         }
 
         else {
-            float right = speed;
-            float left = speed;
+            right = speed;
+            left = speed;
         }
 
         Right.setPower(right);
