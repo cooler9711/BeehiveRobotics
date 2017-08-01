@@ -48,4 +48,5 @@ public class TeleOp4Motor extends OpMode {
 
         motor.setDirection(DcMotor.Direction.REVERSE);
     }
+// TODO: Test on robots to make sure the left wheels are the ones we want to reverse; might be the right wheels.
 }

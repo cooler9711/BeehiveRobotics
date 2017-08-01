@@ -57,4 +57,5 @@ public class TeleOpVG2 extends OpMode {
 
         motor.setDirection(DcMotor.Direction.REVERSE);
     }
+// TODO: Test on robots
 }
