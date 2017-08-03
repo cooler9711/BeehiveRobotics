@@ -23,10 +23,6 @@ public class TeleOp1 extends OpMode {
 
     @Override
     public void loop() {
-        /*
-        float right = gamepad1.right_stick_y;
-        float left = gamepad1.left_stick_y;
-        */
         Right.setPower(gamepad1.right_stick_y);
         Left.setPower(gamepad1.left_stick_y);
     }
