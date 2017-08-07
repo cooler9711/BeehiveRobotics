@@ -5,6 +5,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.*;
 
+//should be the one that controls like a racing game
+
 @TeleOp(name = "TeleOpVG", group = "linear OpMode")
 public class TeleOpVG2 extends OpMode {
 
