@@ -5,26 +5,24 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.*;
 
-//should be the one that controls like a racing game
-
-@TeleOp(name = "TeleOpVG", group = "linear OpMode")
+//should be the one that controls like a racing gRearLeft@TeleOp(name = "TeleOpVG", group = "linear OpMode")
 public class TeleOpVG2 extends OpMode {
 
-    DcMotor Left;
-    DcMotor Left2;
-    DcMotor Right;
-    DcMotor Right2;
+    DcMotor FrontLeft;
+    DcMotor RearLeft;
+    DcMotor FrontRight;
+    DcMotor RearRight;
 
     @Override
 
 
     public void init() {
-        Left = hardwareMap.dcMotor.get("m1");
-        Right = hardwareMap.dcMotor.get("m2");
-        Left2 = hardwareMap.dcMotor.get("m3");
-        Right2 = hardwareMap.dcMotor.get("m4");
-        reverseMotor(Left);
-        reverseMotor(Left2);
+        FrontLeft = hardwareMap.dcMotor.get("m1");
+        FrontRight = hardwareMap.dcMotor.get("m2");
+        RearLeft = hardwareMap.dcMotor.get("m3");
+        RearRight = hardwareMap.dcMotor.get("m4");
+        reverseMotor(FrontLeft);
+        reverseMotor(RearLeft);
     }
 
     @Override
@@ -49,10 +47,10 @@ public class TeleOpVG2 extends OpMode {
             left = speed;
         }
 
-        Right.setPower(right);
-        Right2.setPower(right);
-        Left.setPower(left);
-        Left2.setPower(left);
+        FrontRight.setPower(right);
+        RearRight.setPower(right);
+        FrontLeft.setPower(left);
+        RearLeft.setPower(left);
     }
 
     public void reverseMotor(DcMotor motor) {
