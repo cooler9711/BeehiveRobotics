@@ -8,7 +8,7 @@ import java.lang.*;
 
 //peter's d-pad controlling program
 @TeleOp(name = "TeleOpVG", group = "linear OpMode")
-public class TeleOpVG2 extends OpMode {
+public class TeleOpPeterDP extends OpMode {
 
     DcMotor FrontLeft;
     DcMotor RearLeft;
