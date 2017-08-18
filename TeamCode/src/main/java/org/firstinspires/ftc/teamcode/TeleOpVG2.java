@@ -22,14 +22,14 @@ public class TeleOpVG2 extends OpMode {
         FrontRight = hardwareMap.dcMotor.get("m2");
         RearLeft = hardwareMap.dcMotor.get("m3");
         RearRight = hardwareMap.dcMotor.get("m4");
-        reverseMotor(FrontLeft);
-        reverseMotor(RearLeft);
+        reverseMotor(FrontRight);
+        reverseMotor(RearRight);
     }
 
     @Override
     public void loop() {
         float speed = gamepad1.right_trigger;
-        float steering = gamepad1.left_stick_x;
+        float steering = gamepad1.left_stick_x * speed;
         float middle = speed - Math.abs(steering);
         float right = 0;
         float left = 0;

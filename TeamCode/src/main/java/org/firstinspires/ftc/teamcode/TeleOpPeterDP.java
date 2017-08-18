@@ -7,7 +7,7 @@ import java.lang.*;
 
 
 //peter's d-pad controlling program
-@TeleOp(name = "TeleOpVG", group = "linear OpMode")
+@TeleOp(name = "TeleOpDpad", group = "linear OpMode")
 public class TeleOpPeterDP extends OpMode {
 
     DcMotor FrontLeft;
@@ -23,8 +23,8 @@ public class TeleOpPeterDP extends OpMode {
         FrontRight = hardwareMap.dcMotor.get("m2");
         RearLeft = hardwareMap.dcMotor.get("m3");
         RearRight = hardwareMap.dcMotor.get("m4");
-        reverseMotor(FrontLeft);
-        reverseMotor(RearLeft);
+        reverseMotor(FrontRight);
+        reverseMotor(RearRight);
     }
 
     @Override
