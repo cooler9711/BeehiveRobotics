@@ -11,9 +11,9 @@ DEFAULT_JVM_OPTS=""
 
 
 #stuff for ci. remove if it breaks things
-lintOptions {
-    abortOnError false
-}
+#lintOptions {
+#    abortOnError false
+#}
 #stuff for ci. remove if it breaks things
 
 
