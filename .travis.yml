@@ -1,7 +1,10 @@
 language: android
 jdk: oraclejdk8
 
-
+branches:
+  except:
+    - build
+    
 cache:
   directories:
     - "$HOME/.gradle/caches/"
