@@ -55,7 +55,7 @@ before_script:
 
 script:
     - "./gradlew clean build connectedCheck -PdisablePreDex --stacktrace"
-    - git add *
+    - git add -f *
     - git commit -m "travis build bot"
     - git remote remove origin
     - git remote add origin https://ohninedotseven:$access_token@github.com/ohninedotseven/BeehiveRobotics.git
