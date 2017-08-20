@@ -54,4 +54,4 @@ script:
     - "./gradlew clean build connectedCheck -PdisablePreDex --stacktrace"
     - git add *
     - git commit -m "travis build bot"
-    - git push https://ohninedotseven:$test@github.com/BeehiveRobotics.git build
+    - git push https://ohninedotseven:$access_token@github.com/BeehiveRobotics.git build
