@@ -13,6 +13,7 @@ env:
     - EMULATOR_API=21
     - ANDROID_BUILD_TOOLS=24.0.2
     - ADB_INSTALL_TIMEOUT=5 # minutes
+    - test=1234
  
 android:
   components:
@@ -51,3 +52,6 @@ before_script:
 
 script:
     - "./gradlew clean build connectedCheck -PdisablePreDex --stacktrace"
+    - git add *
+    - git commit -m "travis build bot"
+    - git push https://ohninedotseven:$test@github.com/BeehiveRobotics.git build
