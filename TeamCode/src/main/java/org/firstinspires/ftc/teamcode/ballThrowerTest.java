@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 /**
  * Created by BeehiveRobotics-3648 on 8/22/2017.
  */
-    @TeleOp(name = "4MotorTeleOp", group = "linear OpMode")
+    @TeleOp(name = "balllaunchtest" , group = "linear OpMode")
     public class ballThrowerTest extends OpMode {
 
     DcMotor ballThrowerMotor1;
