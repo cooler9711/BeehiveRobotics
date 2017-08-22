@@ -32,8 +32,8 @@ public class AutonomousSetup extends LinearOpMode {
         BackRightMotor = hardwareMap.dcMotor.get("m4");
 
         // Now do anything else you need to do in the initilazation phase, like calibrating the gyros, setting a color sensors lights off, etc.
-        FrontLeftMotor.setDirection(DcMotor.Direction.REVERSE);
-        BackLeftMotor.setDirection(DcMotor.Direction.REVERSE);
+        FrontRightMotor.setDirection(DcMotor.Direction.REVERSE);
+        BackRightMotor.setDirection(DcMotor.Direction.REVERSE);
         telemetry.addData("Anything you need to know before starting", 1);
         telemetry.update();
 
