@@ -39,10 +39,10 @@ public class TeleOpDPad extends OpMode {
             Speed = 0.6;
         }
         else if (gamepad1.x) {
-            Speed = 0.3;
+            Speed = 0.2;
         }
         else if (gamepad1.y) {
-            Speed = 0.1;
+            Speed = 0.05;
         }
 
         //Setting the motors' speed:
@@ -81,5 +81,7 @@ public class TeleOpDPad extends OpMode {
             BackRight.setPower(0);
         }
 
+        telemetry.addData("Current speed: ", Speed);
+        telemetry.update();
     }
 }
