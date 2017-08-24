@@ -13,7 +13,8 @@ public class TeleOp4Motor extends OpMode {
     DcMotor FrontRight;
     DcMotor RearLeft;
     DcMotor RearRight;
-
+    DcMotor OptionalMotor;
+    boolean OptionalMotorExists = false;
     @Override
 
 
@@ -22,6 +23,14 @@ public class TeleOp4Motor extends OpMode {
         FrontRight = hardwareMap.dcMotor.get("m2");
         RearLeft = hardwareMap.dcMotor.get("m3");
         RearRight = hardwareMap.dcMotor.get("m4");
+        try {
+            OptionalMotor = hardwareMap.dcMotor.get("m5");
+            OptionalMotorExists = true;
+        } catch (IllegalArgumentException e){
+            OptionalMotorExists = false;
+        }
+
+
 
         reverseMotor(FrontLeft);
         reverseMotor(RearLeft);
@@ -34,11 +43,14 @@ public class TeleOp4Motor extends OpMode {
 
         double right = gamepad1.right_stick_y;
         double left = gamepad1.left_stick_y;
-
+        double OptionalMotorSpeed = gamepad1.right_trigger;
         FrontRight.setPower(right);
         FrontLeft.setPower(left);
         RearRight.setPower(right);
         RearLeft.setPower(left);
+        if (OptionalMotorExists){
+            OptionalMotor.setPower(OptionalMotorSpeed);
+        }
 
 
         telemetry.addData("Left power: ", left);
