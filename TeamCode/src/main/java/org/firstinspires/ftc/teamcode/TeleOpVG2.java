@@ -28,25 +28,21 @@ public class TeleOpVG2 extends OpMode {
 
     @Override
     public void loop() {
-        float speed = gamepad1.right_trigger;
+        float speed = 0;
         float steering = gamepad1.left_stick_x * speed;
         float middle = speed - Math.abs(steering);
         float right = 0;
         float left = 0;
 
-        if (steering > 0) {
-            right = middle - steering;
-            left = middle + steering;
+        if (gamepad1.right_trigger > gamepad1.left_trigger) {
+            speed = gamepad1.right_trigger;
         }
-        else if (steering < 0) {
-            right = middle + steering;
-            left = middle - steering;
+        else {
+            speed = gamepad1.left_trigger;
         }
 
-        else {
-            right = speed;
-            left = speed;
-        }
+        right = middle - steering;
+        left = middle + steering;
 
         FrontRight.setPower(right);
         RearRight.setPower(right);
