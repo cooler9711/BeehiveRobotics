@@ -24,7 +24,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
         @Override
         public void loop() {
             double power = gamepad1.left_stick_y;
-        ballThrowerMotor1.setPower(power);
+            ballThrowerMotor1.setPower(power);
             ballThrowerMotor2.setPower(power);
 
             telemetry.addData("current power: ", power);
