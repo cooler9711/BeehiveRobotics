@@ -12,6 +12,9 @@ android {
         minSdkVersion 19
         targetSdkVersion 19
     }
+    lintOptions {
+        abortOnError false
+    }
 
     compileSdkVersion 23
     buildToolsVersion '25.0.0'
