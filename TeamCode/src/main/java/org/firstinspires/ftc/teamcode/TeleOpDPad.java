@@ -12,6 +12,9 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 @TeleOp(name = "TeleOpDPad ", group = "linear OpMode")
 public class TeleOpDPad extends OpMode {
 
@@ -31,6 +34,8 @@ public class TeleOpDPad extends OpMode {
 
         FrontRight.setDirection(DcMotor.Direction.REVERSE);
         BackRight.setDirection(DcMotor.Direction.REVERSE);
+
+        givenUsingTimer_whenSchedulingRepeatedTask_thenCorrect();
     }
 
     public void loop() {
@@ -84,8 +89,21 @@ public class TeleOpDPad extends OpMode {
             BackLeft.setPower(0);
             BackRight.setPower(0);
         }
-
+        /**
         telemetry.addData("Current speed: ", Speed);
-        telemetry.update();
+        telemetry.update();**/
+    }
+    public void givenUsingTimer_whenSchedulingRepeatedTask_thenCorrect(){
+        TimerTask repeatedTask = new TimerTask() {
+            public void run() {
+                telemetry.addData("Task performed on ", new java.util.Date());
+                telemetry.update();
+            }
+        };
+        Timer timer = new Timer("Timer");
+
+        long delay  = 1000L;
+        long period = 1000L;
+        timer.scheduleAtFixedRate(repeatedTask, delay, period);
     }
 }
