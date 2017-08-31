@@ -39,8 +39,8 @@ public class TeleOp4MotorMrRoboto extends OpMode {
 
 
 
-        reverseMotor(FrontLeft);
-        reverseMotor(RearLeft);
+        reverseMotor(FrontRight);
+        reverseMotor(RearRight);
 
 
     }
