@@ -56,7 +56,7 @@ public class TeleOp4MotorMrRoboto extends OpMode {
         RearRight.setPower(right);
         RearLeft.setPower(left);
         if (OptionalMotorExists){
-            OptionalMotor.setPower(OptionalMotorSpeed);
+            OptionalMotor.setPower(-OptionalMotorSpeed);
             TestVariable = OptionalMotorSpeed;
         }
 
