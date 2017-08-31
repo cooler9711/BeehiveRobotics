@@ -20,7 +20,7 @@ public class AutonomousSetup extends LinearOpMode {
 
     // Now declare any universal value you will need more then once, like encoder CPR(Clicks per rotation)
     int CPR = 1120; //Encoder CPR
-    int Tm = 20; // The part of the gear ratio attatched to the motor
+    int Tm = 2; // The part of the gear ratio attatched to the motor
     int Tw = 1; //The part of the gear ratio attatched to the wheel
     double D = 2.5; //Diameter of wheels
     double C = D * Math.PI;//One rotation of tank gear/wheel
@@ -42,7 +42,7 @@ public class AutonomousSetup extends LinearOpMode {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //The Best Way to run autonomous is to make several functions outside this box, and just run those functions here, with different values to change how far to go or for how long
-        rotations(3, .1);
+        rotations(2, .1);
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -55,7 +55,7 @@ public class AutonomousSetup extends LinearOpMode {
             isNegative = true;
         }
         double start, now, goal;
-        double distancePerClicks = numberOfRotations * CPR;
+        double distancePerClicks = ((numberOfRotations - 1) / 2) * CPR;
 
 
         telemetry.addData("Total number of rotations: ", + numberOfRotations);

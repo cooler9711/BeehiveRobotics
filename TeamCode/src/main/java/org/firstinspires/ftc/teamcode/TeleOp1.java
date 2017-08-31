@@ -6,6 +6,10 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 //teleop mode to use if you only have 2 motors
 
+/**
+ * Created by BeehiveRobotics-3648 on 7/13/2017.
+ */
+
 @TeleOp(name = "2MotorTeleOp", group = "linear OpMode")
 public class TeleOp1 extends OpMode {
 

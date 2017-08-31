@@ -4,7 +4,11 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-//teleop mode to use if you have 4 motors 
+//teleop mode to use if you have 4 motors
+
+/**
+ * Created by BeehiveRobotics-3648 on 7/20/2017.
+ */
 
 @TeleOp(name = "4MotorTeleOp", group = "linear OpMode")
 public class TeleOp4Motor extends OpMode {

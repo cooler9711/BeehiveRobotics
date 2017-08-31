@@ -6,6 +6,11 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import java.lang.*;
 
 //the one that controls like a racing game
+
+/**
+ * Created by BeehiveRobotics-3648 on 7/28/2017.
+ */
+
 @TeleOp(name = "TeleOpVG", group = "linear OpMode")
 public class TeleOpVG2 extends OpMode {
 
