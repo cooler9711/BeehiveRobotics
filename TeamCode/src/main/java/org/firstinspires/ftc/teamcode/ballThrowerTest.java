@@ -17,7 +17,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
     public void init() {
         ballThrowerMotor1 = hardwareMap.dcMotor.get("m5");
         ballThrowerMotor2 = hardwareMap.dcMotor.get("m6");
-        ballThrowerMotor2.setDirection(DcMotor.Direction.REVERSE);
+        //ballThrowerMotor2.setDirection(DcMotor.Direction.REVERSE);
 
 
     }
