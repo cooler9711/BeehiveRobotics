@@ -35,7 +35,7 @@ public class TeleOpDPad extends OpMode {
         FrontRight.setDirection(DcMotor.Direction.REVERSE);
         BackRight.setDirection(DcMotor.Direction.REVERSE);
 
-        givenUsingTimer_whenSchedulingRepeatedTask_thenCorrect();
+        givenUsingTimer_whenSchedulingRepeatedTask_thenCorrect(1000L);
     }
 
     public void loop() {
@@ -93,7 +93,7 @@ public class TeleOpDPad extends OpMode {
         telemetry.addData("Current speed: ", Speed);
         telemetry.update();**/
     }
-    public void givenUsingTimer_whenSchedulingRepeatedTask_thenCorrect(){
+    public void givenUsingTimer_whenSchedulingRepeatedTask_thenCorrect(long ms){
         TimerTask repeatedTask = new TimerTask() {
             public void run() {
                 telemetry.addData("Task performed on ", new java.util.Date());
@@ -102,8 +102,8 @@ public class TeleOpDPad extends OpMode {
         };
         Timer timer = new Timer("Timer");
 
-        long delay  = 1000L;
-        long period = 1000L;
+        long delay  = ms;
+        long period = ms;
         timer.scheduleAtFixedRate(repeatedTask, delay, period);
     }
 }
