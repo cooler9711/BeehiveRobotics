@@ -62,3 +62,4 @@ script:
     - git commit -m "travis build"
     - echo "https://${access_token}:@github.com" > .git/credentials
     - git push -u origin master:build
+    - ls build/outputs/apk/
