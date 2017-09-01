@@ -1,3 +1,10 @@
 #!/bin/bash
-d=$(date +%m-%d-%Y)
-#insert sftp stuff here
+
+# Define a timestamp function
+timestamp() {
+  date +"%T"
+}
+
+# do something...
+timestamp # print timestamp
+# put sftp stuff here
