@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Define a timestamp function
-timestamp() {
-  date +"%T"
-}
-
-# do something...
-timestamp # print timestamp
+NOW=$(date +"%Y-%m-%d")
+echo "$LOGFILE"
 # put sftp stuff here
