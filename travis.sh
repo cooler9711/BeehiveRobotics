@@ -3,6 +3,6 @@
 NOW=$(date +"%Y-%m-%d")
 echo "$NOW"
 # put sftp stuff here
-echo "mkdir `$NOW`"
+echo "mkdir $NOW"
 
 # Using backticks you can put it in any command
