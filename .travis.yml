@@ -64,7 +64,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN 
-  on:
-    branch: master
+  target_branch: master
   repo: cooler9711/cooler9711.github.io
-  local_dir: TeamCode/build/outputs/apk
+  local_dir: TeamCode/build/$NOW
