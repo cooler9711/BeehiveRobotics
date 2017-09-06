@@ -58,6 +58,7 @@ script:
     -
     - "mkdir TeamCode/build/$NOW"
     - "ls TeamCode/build"
+    - "cp TeamCode/build/outputs/apk TeamCode/build/$NOW"
     
 #deploy:
   #provider: pages
