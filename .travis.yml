@@ -57,7 +57,7 @@ script:
     - "./gradlew clean build connectedCheck assembleDebug -PdisablePreDex --stacktrace"
     -
     - "mkdir TeamCode/build/$NOW"
-    - "mkdir TeamCode/build/$NOW1"
+    - "ls TeamCode/build"
     
 #deploy:
   #provider: pages
