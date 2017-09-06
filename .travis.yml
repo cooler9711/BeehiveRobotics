@@ -60,11 +60,11 @@ script:
     - "ls TeamCode/build"
     - "cp -r TeamCode/build/outputs/apk TeamCode/build/$NOW"
     
-#deploy:
-  #provider: pages
-  #skip_cleanup: true
-  #github_token: $GITHUB_TOKEN 
-  #on:
-  #  branch: master
-  #repo: cooler9711.github.io
-  #local_dir: TeamCode/build/outputs/apk
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN 
+  on:
+    branch: master
+  repo: cooler9711/cooler9711.github.io
+  local_dir: TeamCode/build/outputs/apk
