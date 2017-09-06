@@ -55,12 +55,15 @@ before_script:
 
 script:
     - "./gradlew clean build connectedCheck assembleDebug -PdisablePreDex --stacktrace"
-    - git config credential.helper "store --file=.git/credentials"
-    - git config --global user.email "travis@ci.com"
-    - git config --global user.name "BuildBot"
-    - git add -f *
-    - git commit -m "travis build"
-    - echo "https://${access_token}:@github.com" > .git/credentials
-    - git push -u origin master:build
-    - ls TeamCode/build/outputs/apk
-    - ./travis.sh
+    -
+    - "mkdir TeamCode/build/$NOW"
+    - "mkdir TeamCode/build/$NOW1"
+    
+#deploy:
+  #provider: pages
+  #skip_cleanup: true
+  #github_token: $GITHUB_TOKEN 
+  #on:
+  #  branch: master
+  #repo: cooler9711.github.io
+  #local_dir: TeamCode/build/outputs/apk
