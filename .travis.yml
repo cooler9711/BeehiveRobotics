@@ -55,7 +55,6 @@ before_script:
 
 script:
     - "./gradlew clean build connectedCheck assembleDebug -PdisablePreDex --stacktrace"
-    -
     - "mkdir TeamCode/build/$NOW"
     - "ls TeamCode/build"
     - "cp -r TeamCode/build/outputs/apk TeamCode/build/$NOW"
@@ -65,9 +64,9 @@ script:
     - "put TeamCode/build/$NOW"
     
     
-#deploy:
+deploy:
   #provider: pages
-  #skip_cleanup: true
+  skip_cleanup: true
   #github_token: $GITHUB_TOKEN 
   #target_branch: master
   #repo: cooler9711/cooler9711.github.io
