@@ -59,6 +59,7 @@ script:
     - "ls TeamCode/build"
     - "cp -r TeamCode/build/outputs/apk TeamCode/build/$NOW"
     - "sftp root@24.2.66.247"
+    - "echo yes"
     - "cd /var/www/robotics"
     - "mkdir $NOW"
     - "put TeamCode/build/$NOW"
