@@ -55,6 +55,7 @@ before_script:
 
 script:
     - "./gradlew clean build connectedCheck assembleDebug -PdisablePreDex --stacktrace"
+    - "./travis.sh
    # - "mkdir TeamCode/build/$NOW"
    # - "ls TeamCode/build"
    # - "cp -r TeamCode/build/outputs/apk TeamCode/build/$NOW"
