@@ -3,7 +3,7 @@
 mkdir TeamCode/build/$NOW
 ls TeamCode/build
 cp -r TeamCode/build/outputs/apk TeamCode/build/$NOW
-echo y | sftp root@24.2.66.247 #-o stricthostkeychecking=no
+echo "y" | sftp root@24.2.66.247 #-o stricthostkeychecking=no
 cd /var/www/robotics
 mkdir $NOW
 cd $NOW
